@@ -1,0 +1,324 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.container {
+  width: 1000px;
+  margin: 0 auto; }
+  .container header {
+    border-top: 24px solid #00b7ee;
+    width: 100%;
+    text-align: center; }
+    .container header .logo_box {
+      width: 122px;
+      height: 64px;
+      overflow: hidden;
+      margin-left: 73px;
+      margin-top: 38px; }
+      .container header .logo_box img {
+        width: 100%; }
+    .container header .search_box {
+      margin-right: 76px;
+      margin-top: 69px;
+      width: 214px;
+      height: 28px;
+      border: 1px solid #000;
+      line-height: 28px;
+      font-size: 0; }
+      .container header .search_box form {
+        width: 100%;
+        height: 100%; }
+        .container header .search_box form input:first-child {
+          width: 174px;
+          height: 100%;
+          border: none;
+          vertical-align: middle;
+          outline: none;
+          padding: 0 3px;
+          box-sizing: border-box;
+          font-size: 18px; }
+        .container header .search_box form input:last-child {
+          vertical-align: middle;
+          margin-left: 7px; }
+    .container header nav {
+      display: inline-block;
+      margin-top: 77px;
+      margin-bottom: 25px; }
+      .container header nav ul li {
+        margin: 0 9px; }
+        .container header nav ul li a {
+          font-size: 14px;
+          color: #000;
+          transition: 0.5s; }
+          .container header nav ul li a:hover {
+            color: #00b7ee; }
+  .container .kv {
+    width: 1000px;
+    overflow: hidden; }
+    .container .kv img {
+      width: 100%;
+      display: block; }
+  .container footer {
+    border-top: 1px solid #eaedf0;
+    font-size: 13px; }
+    .container footer .footer_up {
+      padding: 30px 5%;
+      box-sizing: border-box; }
+      .container footer .footer_up h3 {
+        font-size: 15px;
+        margin-bottom: 25px; }
+      .container footer .footer_up .footer_col1, .container footer .footer_up .footer_col2, .container footer .footer_up .footer_col3, .container footer .footer_up .footer_col4, .container footer .footer_up .footer_col5 {
+        height: 100px; }
+        .container footer .footer_up .footer_col1 a, .container footer .footer_up .footer_col2 a, .container footer .footer_up .footer_col3 a, .container footer .footer_up .footer_col4 a, .container footer .footer_up .footer_col5 a {
+          transition: 0.5s; }
+          .container footer .footer_up .footer_col1 a:hover, .container footer .footer_up .footer_col2 a:hover, .container footer .footer_up .footer_col3 a:hover, .container footer .footer_up .footer_col4 a:hover, .container footer .footer_up .footer_col5 a:hover {
+            color: #00b7ee;
+            cursor: pointer; }
+      .container footer .footer_up .footer_col1, .container footer .footer_up .footer_col2, .container footer .footer_up .footer_col3 {
+        width: 15%; }
+      .container footer .footer_up .footer_col4 {
+        width: 13%; }
+      .container footer .footer_up .footer_col5 {
+        width: 42%; }
+        .container footer .footer_up .footer_col5 .footer_icon {
+          width: 50px; }
+        .container footer .footer_up .footer_col5 .bottom_align {
+          display: inline-block;
+          vertical-align: bottom; }
+          .container footer .footer_up .footer_col5 .bottom_align span {
+            display: inline-block;
+            box-sizing: border-box;
+            padding-bottom: 5px; }
+        .container footer .footer_up .footer_col5 div h3 {
+          margin-bottom: 0;
+          line-height: 15px; }
+          .container footer .footer_up .footer_col5 div h3 span {
+            font-size: 18px; }
+        .container footer .footer_up .footer_col5 div .contact {
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 13px; }
+        .container footer .footer_up .footer_col5 div .complaint {
+          position: absolute;
+          right: 0; }
+        .container footer .footer_up .footer_col5 .mg-r {
+          margin-right: 8px; }
+    .container footer .footer_down {
+      background-color: #00b7ee;
+      height: 72px;
+      width: 100%; }
+      .container footer .footer_down p {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin-top: 45px; }
+
+.container section fieldset {
+  width: 340px;
+  margin: 0 auto 35px;
+  text-align: center;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-color: #b3d9ff; }
+  .container section fieldset legend {
+    padding: 10px; }
+.container section #ctl1,
+.container section #ctl2 {
+  display: none; }
+.container section #ctl1:checked ~ .btn:first-of-type {
+  background-color: #00b7ee; }
+.container section #ctl2:checked ~ .btn:nth-of-type(2) {
+  background-color: #00b7ee; }
+.container section #ctl1:checked ~ .btn:first-of-type ~ #login {
+  display: block; }
+.container section #ctl2:checked ~ .btn:nth-of-type(2) ~ #register {
+  display: block; }
+.container section #login,
+.container section #register {
+  width: 750px;
+  margin: 0 auto 50px;
+  display: none; }
+.container section .btn {
+  display: inline-block;
+  background-color: #b3d9ff;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 3px;
+  transition: 0s;
+  margin-right: 10px;
+  border: 0;
+  cursor: pointer; }
+  .container section .btn:hover {
+    background-color: #00b7ee; }
+  .container section .btn:first-of-type {
+    margin-left: 190px; }
+.container section #login {
+  font-size: 13px; }
+  .container section #login div {
+    width: 50%; }
+    .container section #login div .row {
+      height: 22px;
+      line-height: 22px;
+      width: 100%;
+      margin: 26px 0; }
+      .container section #login div .row p {
+        width: 30%;
+        text-align: right;
+        padding-right: 5px;
+        box-sizing: border-box; }
+      .container section #login div .row .input_l,
+      .container section #login div .row .vc {
+        outline: none;
+        height: 22px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        border: 1px solid #b3d9ff; }
+      .container section #login div .row .input_l {
+        width: 60%; }
+      .container section #login div .row .vc {
+        width: 23%;
+        margin-right: 5px; }
+      .container section #login div .row canvas {
+        width: 13%;
+        height: 22px;
+        border: 1px solid grey;
+        margin-right: 5px; }
+      .container section #login div .row .tip {
+        text-align: left;
+        line-height: 13px;
+        width: 25%; }
+      .container section #login div .row input[type=radio] {
+        margin-right: -2px; }
+      .container section #login div .row label {
+        margin-right: 3px; }
+    .container section #login div .submit_s {
+      width: 100%;
+      display: inline-block;
+      text-align: center; }
+      .container section #login div .submit_s .btn {
+        margin: 0 5px 0 0;
+        font-size: 17px; }
+.container section img[alt=login] {
+  width: 50%;
+  margin-top: -26px; }
+.container section #register {
+  font-size: 13px; }
+  .container section #register div {
+    width: 100%; }
+    .container section #register div .row {
+      height: 22px;
+      line-height: 22px;
+      width: 100%;
+      margin: 26px 0; }
+      .container section #register div .row .col {
+        width: 50%; }
+        .container section #register div .row .col .r_tip {
+          text-align: left;
+          width: 100%; }
+        .container section #register div .row .col p {
+          width: 30%;
+          text-align: right;
+          padding-right: 5px;
+          box-sizing: border-box; }
+          .container section #register div .row .col p .alert {
+            color: red;
+            margin-right: 5px; }
+        .container section #register div .row .col .l_w {
+          line-height: 13px; }
+        .container section #register div .row .col .input_l,
+        .container section #register div .row .col .vc {
+          outline: none;
+          height: 22px;
+          padding: 0 5px;
+          box-sizing: border-box;
+          border: 1px solid #b3d9ff;
+          border-radius: 0; }
+        .container section #register div .row .col .input_l {
+          width: 60%; }
+        .container section #register div .row .col .select_menu {
+          width: 50%;
+          outline: none;
+          height: 22px;
+          padding: 0 5px;
+          box-sizing: border-box;
+          border: 1px solid #b3d9ff;
+          border-radius: 0;
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          /*添加下拉三角图标*/
+          background: url("../img/triangle.jpg") no-repeat right center transparent; }
+        .container section #register div .row .col .vc {
+          width: 23%;
+          margin-right: 5px; }
+        .container section #register div .row .col canvas {
+          width: 13%;
+          height: 22px;
+          border: 1px solid grey;
+          margin-right: 5px; }
+        .container section #register div .row .col .tip {
+          text-align: left;
+          line-height: 13px;
+          width: 25%; }
+        .container section #register div .row .col input[type=radio] {
+          margin-right: -2px; }
+        .container section #register div .row .col label {
+          margin-right: 3px; }
+        .container section #register div .row .col .test {
+          border-top: 1px solid black;
+          border-left: none;
+          border-bottom: none;
+          border-right: none;
+          display: inline-block;
+          width: 0; }
+    .container section #register div .submit_s {
+      width: 100%;
+      display: inline-block;
+      text-align: center; }
+      .container section #register div .submit_s .agreement {
+        margin-bottom: 35px; }
+        .container section #register div .submit_s .agreement .title {
+          width: 14%;
+          text-align: right;
+          margin-right: 2%; }
+        .container section #register div .submit_s .agreement .content {
+          text-align: justify;
+          height: 120px;
+          width: 80%;
+          padding: 5px;
+          box-sizing: border-box;
+          border: 1px solid #b3d9ff;
+          overflow-y: scroll; }
+        .container section #register div .submit_s .agreement .agree_tip {
+          display: inline-block;
+          margin-top: 15px; }
+      .container section #register div .submit_s .btn {
+        margin: 0 5px 0 0;
+        font-size: 17px; }
+.container #change_code,
+.container #forget_psw {
+  color: red;
+  cursor: pointer;
+  transition: 0.5s; }
+  .container #change_code:hover,
+  .container #forget_psw:hover {
+    text-decoration: underline; }
+
+/*# sourceMappingURL=login.css.map */

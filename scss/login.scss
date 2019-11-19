@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+@import "_reset";
+@import "_common";
+
+$index_color:#00b7ee;
+$border_color:#b3d9ff;
+$text_size:13px;
+
+.container {
+    section {
+
+        fieldset {
+            width: 340px;
+            margin: 0 auto 35px;
+            text-align: center;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            border-color: $border_color;
+
+            legend {
+                padding: 10px;
+            }
+
+
+        }
+
+        #ctl1,
+        #ctl2 {
+            display: none;
+
+        }
+
+        #ctl1:checked~.btn:first-of-type {
+            background-color: $index_color;
+        }
+
+        #ctl2:checked~.btn:nth-of-type(2) {
+            background-color: $index_color;
+        }
+
+        #ctl1:checked~.btn:first-of-type~#login {
+            display: block;
+        }
+
+        #ctl2:checked~.btn:nth-of-type(2)~#register {
+            display: block;
+        }
+
+        #login,
+        #register {
+            width: 750px;
+            margin: 0 auto 50px;
+            display: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #b3d9ff;
+            width: 100px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 3px;
+            transition: 0s;
+            margin-right: 10px;
+            border: 0;
+            cursor: pointer;
+
+            // margin-bottom: 20px;
+            &:hover {
+                background-color: $index_color;
+            }
+
+            &:first-of-type {
+                margin-left: 190px;
+            }
+        }
+
+        #login {
+            font-size: $text_size;
+
+            div {
+                width: 50%;
+
+                .row {
+                    height: 22px;
+                    line-height: 22px;
+                    width: 100%;
+                    margin: 26px 0;
+
+                    p {
+                        width: 30%;
+                        text-align: right;
+                        padding-right: 5px;
+                        box-sizing: border-box;
+                    }
+
+                    .input_l,
+                    .vc {
+                        outline: none;
+                        height: 22px;
+                        padding: 0 5px;
+                        box-sizing: border-box;
+                        border: 1px solid $border_color;
+                    }
+
+                    .input_l {
+
+                        width: 60%;
+                    }
+
+                    .vc {
+                        width: 23%;
+                        margin-right: 5px;
+                    }
+
+                    canvas {
+                        width: 13%;
+                        height: 22px;
+                        border: 1px solid grey;
+                        margin-right: 5px;
+                    }
+
+                    .tip {
+                        text-align: left;
+                        line-height: 13px;
+                        width: 25%;
+
+                    }
+
+                    input[type=radio] {
+                        margin-right: -2px;
+
+                    }
+
+                    label {
+                        margin-right: 3px;
+                    }
+                }
+
+                .submit_s {
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+
+                    .btn {
+                        margin: 0 5px 0 0;
+                        font-size: 17px;
+                        // font-weight: bolder;
+                    }
+                }
+
+            }
+
+
+        }
+
+        img[alt=login] {
+            width: 50%;
+            margin-top: -26px;
+        }
+
+        #register {
+            font-size: $text_size;
+
+            div {
+                width: 100%;
+
+
+                .row {
+
+                    height: 22px;
+                    line-height: 22px;
+                    width: 100%;
+                    margin: 26px 0;
+
+                    .col {
+                        width: 50%;
+
+                        .r_tip {
+                            text-align: left;
+                            width: 100%;
+                        }
+
+                        p {
+                            width: 30%;
+                            text-align: right;
+                            padding-right: 5px;
+                            box-sizing: border-box;
+
+                            .alert {
+                                color: red;
+                                margin-right: 5px;
+                            }
+
+                        }
+
+                        .l_w {
+                            line-height: 13px;
+                        }
+
+                        .input_l,
+                        .vc {
+                            outline: none;
+                            height: 22px;
+                            padding: 0 5px;
+                            box-sizing: border-box;
+                            border: 1px solid $border_color;
+                            border-radius: 0;
+                            // background-color: none;
+
+                        }
+
+                        .input_l {
+
+                            width: 60%;
+
+                        }
+
+                        .select_menu {
+                            width: 50%;
+                            outline: none;
+                            height: 22px;
+                            padding: 0 5px;
+                            box-sizing: border-box;
+                            border: 1px solid $border_color;
+                            border-radius: 0;
+                            appearance: none;
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            /*添加下拉三角图标*/
+                            background: url("../img/triangle.jpg") no-repeat right center transparent;
+
+                        }
+
+                        .vc {
+                            width: 23%;
+                            margin-right: 5px;
+                        }
+
+                        canvas {
+                            width: 13%;
+                            height: 22px;
+                            border: 1px solid grey;
+                            margin-right: 5px;
+                        }
+
+                        .tip {
+                            text-align: left;
+                            line-height: 13px;
+                            width: 25%;
+
+                        }
+
+                        input[type=radio] {
+                            margin-right: -2px;
+
+                        }
+
+                        label {
+                            margin-right: 3px;
+                        }
+
+
+
+                        .test {
+                            border-top: 1px solid black;
+                            border-left: none;
+                            border-bottom: none;
+                            border-right: none;
+                            display: inline-block;
+                            width: 0;
+
+                        }
+
+                    }
+
+                }
+
+                .submit_s {
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+
+                    .agreement {
+                        margin-bottom: 35px;
+
+                        .title {
+                            width: 14%;
+                            text-align: right;
+                            margin-right: 2%;
+
+
+                        }
+
+                        .content {
+                            text-align: justify;
+                            height: 120px;
+                            width: 80%;
+                            padding: 5px;
+                            box-sizing: border-box;
+                            border: 1px solid $border_color;
+                            overflow-y: scroll;
+
+                        }
+
+                        
+                        
+                    
+
+                        
+
+
+                        .agree_tip {
+                            display: inline-block;
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .btn {
+                        margin: 0 5px 0 0;
+                        font-size: 17px;
+                        // font-weight: bolder;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    #change_code,
+    #forget_psw {
+        color: red;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+}
