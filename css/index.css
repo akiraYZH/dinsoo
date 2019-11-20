@@ -216,7 +216,7 @@
     .container .link #carousel .c_frame {
       margin: 0 auto;
       width: 720px;
-      height: 80px;
+      height: 300px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -224,12 +224,19 @@
       background: none;
       overflow: hidden; }
       .container .link #carousel .c_frame .c_bar {
-        position: absolute; }
+        width: 720px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
       .container .link #carousel .c_frame .carousel_img {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
         width: 220px;
-        height: 75px;
+        height: 70px;
         margin: 0 10px;
-        overflow: hidden; }
+        overflow: hidden;
+        transition: 0.5s ease-in-out; }
         .container .link #carousel .c_frame .carousel_img img {
           width: 230px; }
     .container .link #carousel #ctl-l, .container .link #carousel #ctl-r {
