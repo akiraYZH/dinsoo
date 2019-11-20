@@ -68,9 +68,10 @@ $text_size:13px;
                     a{
                         font-size:14px;
                         color:$font_color;
-                        transition:0.5s;
+                        // transition:0.5s;
                         &:hover{
                             color:$index_color;
+                            transition: 0.5s;
                         }
 
                     }

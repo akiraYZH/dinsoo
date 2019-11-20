@@ -61,10 +61,10 @@
         margin: 0 9px; }
         .container header nav ul li a {
           font-size: 14px;
-          color: #000;
-          transition: 0.5s; }
+          color: #000; }
           .container header nav ul li a:hover {
-            color: #00b7ee; }
+            color: #00b7ee;
+            transition: 0.5s; }
   .container .kv {
     width: 1000px;
     overflow: hidden; }
@@ -154,6 +154,11 @@
       font-size: 16px;
       line-height: 30px;
       margin-left: -5px; }
+      .container section .inner_frame .path_box .path a {
+        color: black; }
+        .container section .inner_frame .path_box .path a:hover {
+          color: #6db6ff;
+          transition: 0.5s; }
   .container section .inner_frame table {
     width: 100%;
     border-collapse: collapse;

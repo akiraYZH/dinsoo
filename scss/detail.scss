@@ -38,11 +38,12 @@ $text_size:13px;
                 }
 
                 a {
-                    transition: 0.5s;
+                    
                     color: black;
 
                     &:hover {
                         color: $border_color;
+                        transition: 0.5s;
                     }
                 }
             }

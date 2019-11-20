@@ -62,10 +62,10 @@
         margin: 0 9px; }
         .container header nav ul li a {
           font-size: 14px;
-          color: #000;
-          transition: 0.5s; }
+          color: #000; }
           .container header nav ul li a:hover {
-            color: #00b7ee; }
+            color: #00b7ee;
+            transition: 0.5s; }
   .container .kv {
     width: 1000px;
     overflow: hidden; }

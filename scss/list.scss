@@ -49,6 +49,13 @@ $text_size:13px;
                     font-size: $h3_size;
                     line-height: 30px;
                     margin-left: -5px;
+                    a{
+                        color:black;
+                        &:hover{
+                            color:$border_color;
+                            transition: 0.5s;
+                        }
+                    }
                 }
             }
 
