@@ -1,17 +1,14 @@
 onload=function(){
-    new Carousel('carousel');
+    new Carousel('#carousel');
 }
 
 function Carousel(id){
-    // var oCarousel = document.getElementById(id);
-    // alert(oCarousel);
-
-
-    // var _this=this;
+    
+    this.carousel_obj = document.querySelector(id);
     this.speed=1;
-    this.img_bar = document.querySelector('#c_bar');
-    this.oCtl_l = document.querySelector('#ctl-l');
-    this.oCtl_r = document.querySelector('#ctl-r');
+    this.img_bar = this.carousel_obj.querySelector('#c_bar');
+    this.oCtl_l = this.carousel_obj.querySelector('#ctl-l');
+    this.oCtl_r = this.carousel_obj.querySelector('#ctl-r');
     this.timer=null;
 
 
@@ -19,68 +16,84 @@ function Carousel(id){
     this.img_bar.style.width=(this.img_bar.offsetWidth*2) + 'px';
 
 
-    // this.imgs = this.img_bar.children;
     
-
     
-    this.move(this)
-    this.show(this);
     
-
-    // alert(this.img_bar.children.length);
-
+ 
+    this.move()
+ 
     
+    var _this = this;
+    for(i=0;i<this.img_bar.children.length;i++){
 
-
-
-}
-
-
-Carousel.prototype.move = function (Carousel){
-    // var oC_bar = Carousel.img_bar;
-    // var speed = speed;
-
-    // alert((-oC_bar.offsetWidth/2));
-    Carousel.oCtl_l.onclick=function () { 
-        Carousel.speed=-Math.abs(Carousel.speed);
-     }
-
-     Carousel.oCtl_r.onclick=function () { 
-        Carousel.speed=Math.abs(Carousel.speed);
-     }
-
-    Carousel.timer = setInterval(function(){
-        
-        if(parseInt(Carousel.img_bar.style.left) <= (-Carousel.img_bar.offsetWidth/2)){
-            Carousel.img_bar.style.left=0 + 'px'
-        } else if(parseInt(Carousel.img_bar.style.left)>=0) {
-            Carousel.img_bar.style.left=(-Carousel.img_bar.offsetWidth/2) +'px';
+        this.img_bar.children[i].onmouseover = function(){
+            
+            _this.show(this);
         }
-        console.log(Carousel.img_bar.style.left);
-        Carousel.img_bar.style.left=Carousel.img_bar.offsetLeft;
-        Carousel.img_bar.style.left=parseInt(Carousel.img_bar.style.left)+Carousel.speed+'px';
-
-    }, 30)
-
-    
-    
-}
-
-Carousel.prototype.show = function(Carousel){
-    // alert(Carousel.img_bar.children.length)
-    
-    for(i=0;i<Carousel.img_bar.children.length;i++){
-        Carousel.img_bar.children[i].onmouseover = function(){
-            clearInterval(Carousel.timer);
-            this.style.transform = 'scale(2)';
-            this.style.zIndex = '1';
-            this.style.boxShadow = '1px 1px 4px rgba(0,0,0,0.5)';
-        }
-        Carousel.img_bar.children[i].onmouseout = function(){
-            Carousel.move(Carousel);
-            this.style.transform = 'scale(1)';
-            this.style.zIndex = '0';
-            this.style.boxShadow = 'none';
+        this.img_bar.children[i].onmouseout = function(){
+           
+            _this.shrink(this);
+            _this.move();
+            
+            
         }
     }
+
+    
+
+
+
+}
+
+
+Carousel.prototype.move = function (){
+    
+
+
+    
+
+    this.oCtl_l.onclick=function () { 
+        this.speed=-Math.abs(this.speed);
+        
+     }.bind(this)
+
+     this.oCtl_r.onclick=function () { 
+        this.speed=Math.abs(this.speed);
+     }.bind(this)
+
+    this.timer = setInterval(function(){
+        
+        if(parseInt(this.img_bar.style.left) <= (-this.img_bar.offsetWidth/2)){
+            this.img_bar.style.left=0 + 'px'
+        } else if(parseInt(this.img_bar.style.left)>=0) {
+            this.img_bar.style.left=(-this.img_bar.offsetWidth/2) +'px';
+        }
+        // console.log(this.imgc_bar.style.left);
+        this.img_bar.style.left=this.img_bar.offsetLeft;
+        this.img_bar.style.left=parseInt(this.img_bar.style.left)+this.speed+'px';
+
+    }.bind(this), 30)
+
+    
+    
+}
+
+Carousel.prototype.show = function(img){
+    // alert(this.img_bar.children.length)
+    clearInterval(this.timer);
+    img.style.transform = 'scale(1.5)';
+    img.style.zIndex = '1';
+    img.style.boxShadow = '1px 1px 4px rgba(0,0,0,0.5)';
+    
+}
+
+
+Carousel.prototype.shrink= function(img){
+    // alert(this.img_bar.children.length)
+    // alert(this);
+    
+    img.style.transform = 'scale(1)';
+    img.style.zIndex = '0';
+    img.style.boxShadow = 'none';
+    
 }

@@ -97,8 +97,16 @@ $text_size:13px;
                     height:190px;
                     overflow: hidden;
                     border:1px solid black;
+                    background: url('../img/project_qr.jpeg');
+                    background-size: 40%, 40%, auto;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    &:hover>img{
+                        transform:translateY(-220px);
+                    }
                     img{
                         width:100%;
+                        transition: 1s;
                     }
                 }
                 .case_title{
