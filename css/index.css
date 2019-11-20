@@ -255,7 +255,11 @@
       line-height: 70px;
       font-size: 36px;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: 0.5s; }
+      .container .link #carousel #ctl-l:hover, .container .link #carousel #ctl-r:hover {
+        background-color: rgba(0, 0, 0, 0.8); }
     .container .link #carousel #ctl-l {
       left: 5px; }
       .container .link #carousel #ctl-l span {
