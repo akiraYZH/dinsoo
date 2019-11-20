@@ -85,7 +85,7 @@ $text_size:13px;
         }
 
         .case_frame{
-            padding:20px $inner_fr_w;
+            padding:20px $inner_fr_w 0;
             box-sizing: border-box;
             width:100%;
             .case_box{

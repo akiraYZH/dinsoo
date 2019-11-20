@@ -96,6 +96,7 @@ $text_size:13px;
         border-top:1px solid #eaedf0;
         
         font-size:$text_size;
+        
         .footer_up{
             padding:30px $inner_fr_w;
             box-sizing: border-box;
@@ -109,10 +110,11 @@ $text_size:13px;
                 height:100px;
                 
                 a{
-                    transition: 0.5s;
+                    
                     &:hover{
                         color:$index_color;
                         cursor: pointer;
+                        transition: 0.5s;
                     }
                 }
         
