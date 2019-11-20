@@ -221,10 +221,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: none; }
+      background: none;
+      overflow: hidden; }
       .container .link #carousel .c_frame .c_bar {
-        width: 1440px;
-        background-color: white; }
+        position: absolute; }
       .container .link #carousel .c_frame .carousel_img {
         width: 220px;
         height: 75px;

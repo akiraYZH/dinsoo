@@ -161,10 +161,13 @@ $text_size:13px;
                 left:50%;
                 transform:translate(-50%,-50%);
                 background: none;
+                overflow: hidden;
 
                 .c_bar{
-                    width:1440px;
-                    background-color: white;
+                    // width:1440px;
+                    // background-color: white;
+                    position: absolute;
+                    // left:50%;
                 }
                 .carousel_img{
 
